@@ -1,0 +1,25 @@
+<p>property-binding works!</p>
+
+<!-- property binding u can bind attribute/custom attribute/directive -->
+
+<!-- syntax=> [attributename]="Property_name" -->
+
+<input type="text"
+[value]="name"
+> <br><br>
+
+<img [src]="ImageUrl" alt="">
+
+<h2> Difference Between 
+    String Interpolation Vs
+     Property Binding </h2>
+
+<div hidden=" {{isHidden}} ">
+show value using string interpolation
+</div>
+
+<div [hidden]="isHidden">
+    show value using Property Binding
+    </div>
+
+
