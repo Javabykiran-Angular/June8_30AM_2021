@@ -1,0 +1,16 @@
+<p>classbinding works!</p>
+
+<h2 [class]="myclass">
+    Apply Class Binding</h2>
+
+<div [class.danger]="rating<5"
+    [class.warning]="rating>5"
+>
+    Apply Class Binding on condition
+</div>
+
+<!-- directive ngClass =>
+  if u want apply multiple classes u can use ngClass directive -->
+
+  <h2 [ngClass]="myjson">Apply ngClass Directive</h2>
+
