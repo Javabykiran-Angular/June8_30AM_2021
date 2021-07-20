@@ -1,0 +1,31 @@
+<p>eventbinding1 works!</p>
+
+<!-- click => predefined event -->
+
+<!-- syntax => (eventName)="CustomMethodName()" -->
+
+    <button (click)="onClick()" >Click Me</button> <br><br>
+    <img src="../../assets/bg.jpeg" alt="" (click)="onImageclick()" >
+
+    <!-- $event => It is special variable of angular
+    it give current dom element information  -->
+    <br><br>
+    <button (click)="onEvent($event)" 
+    value="Event Occur!!!"
+    >Event Info</button>
+<br><br>
+
+<!-- template reference variable -->
+
+<input type="text" #myinput
+placeholder="Enter the name" > <br>
+<button (click)="OnGetData(myinput.value)">Get Data</button>
+<hr>
+<input type="text" #myinput1
+placeholder="Enter the name" > <br>
+<button (click)="OnGetData1(myinput1)">Get Data</button>
+
+
+
+
+
