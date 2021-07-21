@@ -1,0 +1,35 @@
+<p>eventbinding2 works!</p>
+
+<input #num1 type="text" placeholder="Enter the Number1"> <br><br>
+<input #num2 type="text" placeholder="Enter the Number2"> <br><br>
+<button (click)="OnAddition(num1.value,num2.value)">Addition</button> <br><br>
+<input type="text" 
+placeholder="Display Result" 
+[value]="result">
+<hr>
+<input #input type="text"
+ (change)="onChange(input)"
+placeholder="Enter the name"><br><br>
+
+<input type="text"
+placeholder="Key Up Event..."
+(keyup)="onKeyUp()"
+>
+<br><br>
+
+<input type="text"
+placeholder="Key down Event..."
+(keydown)="onKeyDown()"
+>
+<br><br>
+
+<input #myinput type="text" placeholder="Enter the name">
+<button (click)="name=myinput.value">Display</button> <br>
+<h2> {{name}} </h2>
+<hr>
+
+<input type="text" [(ngModel)]="name1"
+placeholder="Enter the Name"> &nbsp; {{name1}} <br><br>
+
+
+<button (click)="OnApply()">Apply</button>
