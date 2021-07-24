@@ -1,0 +1,30 @@
+<p>parent works!</p>
+
+<h2>Data is ::  {{strdatarecive}} </h2>
+
+<table>
+    <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Id</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of ArrDataReceive;index as i">
+                <td> {{i+1}} </td>
+                <td> {{item.name}} </td>
+                <td> {{item.id}} </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- <button (click)="OnSend()">Send Data</button>
+
+<app-child1 [parentToChildStr]="strData"
+    [ParentNumData]="numberData" 
+    [ParentJson]="myjson"
+></app-child1> -->
+
+<app-child2 (ChildStrEvent)="strdatarecive=$event" 
+(ChildARREvent)="ArrDataReceive=$event"
+></app-child2>
